@@ -4,12 +4,12 @@
 img {
     width: 100%;
 }
-@keyframes example {
-    from {border-color: red;}
-    to {border-color: yellow;}
-  }
 body{
     min-height: 100%;
+}
+button{
+    background-color:#BF0603;
+    color: white;
 }
 .grid-container {
     display: grid;
