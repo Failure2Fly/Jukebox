@@ -4,6 +4,10 @@
 img {
     width: 100%;
 }
+@keyframes example {
+    from {border-color: red;}
+    to {border-color: yellow;}
+  }
 body{
     min-height: 100%;
 }
@@ -18,29 +22,61 @@ body{
       "C1 C2 C3"
       "D1 D2 D3"
       "E1 E2 E3";
+    background-color: #001427;
 }
 .A1 {
     display: grid;
     grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "A1Outside A1Inside";
+    grid-area: A1;
+    margin: 0px 0px 20px 20px;
+}
+.A1Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "a1 a2"
-      "a3 a4";
-    grid-area: A1;
-    background-color: #F4D58D;
-    padding: 20px;
+      "A1Outside1"
+      "A1Outside2";
+    grid-area: A1Outside;
+    text-align: center;
 }
-.a1, .a2, .a3, .a4{padding: 20px; border: 1px solid black;}
-.a1, .a3 {
+.A1Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "A1Inside1"
+      "A1Inside2"
+      "A1Inside3";
+    grid-area: A1Inside;
+}
+.A1Outside1, .A1Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    padding: 20px;
+    border: 1px solid black;
+}
+.A1Inside1, .A1Inside2, .A1Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
 }
-.a2, .a4 {
-    background-color: #EBE4D4;
+.A1Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
+
 .A2 {
     grid-area: A2;
     background-color: #878E99;
@@ -49,47 +85,112 @@ body{
 }
 .A3 {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "A3Inside A3Outside";
+    grid-area: A3;
+    margin: 0px 20px 20px 0px;
+}
+.A3Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "A3Inside1"
+      "A3Inside2"
+      "A3OInside3";
+    grid-area: A3Inside;
+}
+.A3Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "a5 a6"
-      "a7 a8";
-    grid-area: A3;
-    background-color: #F4D58D;
-    padding: 20px;
+      "A3Outside1"
+      "A3Outside2";
+    grid-area: A3Outside;
+    text-align: center;
 }
-.a5, .a6, .a7, .a8{padding: 20px; border: 1px solid black;}
-.a5, .a7 {
+
+.A3Outside1, .A3Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.A3Inside1, .A3Inside2, .A3Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
 }
-.a6, .a8 {
-    background-color: #EBE4D4;
+.A3Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
+
+
+
+
 .B1 {
     display: grid;
     grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "B1Outside B1Inside";
+    grid-area: B1;
+    margin: 0px 0px 20px 20px;
+}
+.B1Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "b1 b2"
-      "b3 b4";
-    grid-area: B1;
-    background-color:#F4D58D;
-    padding: 20px;
+      "B1Outside1"
+      "B1Outside2";
+    grid-area: B1Outside;
+    text-align: center;
 }
-.b1, .b2, .b3, .b4{padding: 20px; border: 1px solid black;}
-.b1, .b3 {
+.B1Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "B1Inside1"
+      "B1Inside2"
+      "b1Inside3";
+    grid-area: B1Inside;
+}
+.B1Outside1, .B1Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 24px;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid black;
 }
-.b2, .b4 {
-    background-color: #EBE4D4;
+.B1Inside1, .B1Inside2, .B1Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+.B1Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
 .B2 {
     grid-area: B2;
@@ -99,48 +200,111 @@ body{
 }
 .B3 {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "B3Inside B3Outside";
+    grid-area: B3;
+    margin: 0px 20px 20px 0px;
+}
+.B3Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "B3Inside1"
+      "B3Inside2"
+      "B3OInside3";
+    grid-area: B3Inside;
+}
+.B3Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "b5 b6"
-      "b7 b8";
-    grid-area: B3;
-    background-color: #F4D58D;
-;
-    padding: 20px;
+      "B3Outside1"
+      "B3Outside2";
+    grid-area: B3Outside;
+    text-align: center;
 }
-.b5, .b6, .b7, .b8{padding: 20px; border: 1px solid black;}
-.b5, .b7 {
+
+.B3Outside1, .B3Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.B3Inside1, .B3Inside2, .B3Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
 }
-.b6, .b8 {
-    background-color: #EBE4D4;
+.B3Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
+
+
 .C1 {
     display: grid;
     grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "C1Outside C1Inside";
+    grid-area: C1;
+    margin: 0px 0px 20px 20px;
+    height: 200px;
+  }
+.C1Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "c1 c2"
-      "c3 c4";
-    grid-area: C1;
-    background-color:#F4D58D;
-    padding: 20px;
+      "C1Outside1"
+      "C1Outside2";
+    grid-area: C1Outside;
+    text-align: center;
 }
-.c1, .c2, .c3, .c4{padding: 20px; border: 1px solid black;}
-.c1, .c3 {
+.C1Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "C1Inside1"
+      "C1Inside2"
+      "C1Inside3";
+    grid-area: C1Inside;
+}
+.C1Outside1, .C1Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 24px;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid black;
 }
-.c2, .c4 {
-    background-color: #EBE4D4;
+.C1Inside1, .C1Inside2, .C1Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+.C1Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
 .C2 {
     grid-area: C2;
@@ -150,47 +314,110 @@ body{
 }
 .C3 {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "C3Inside C3Outside";
+    grid-area: C3;
+    margin: 0px 20px 20px 0px;
+}
+.C3Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "C3Inside1"
+      "C3Inside2"
+      "C3OInside3";
+    grid-area: C3Inside;
+}
+.C3Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "c5 c6"
-      "c7 c8";
-    grid-area: C3;
-    background-color:#F4D58D;
-    padding: 20px;
+      "C3Outside1"
+      "C3Outside2";
+    grid-area: C3Outside;
+    text-align: center;
 }
-.c5, .c6, .c7, .c8{padding: 20px; border: 1px solid black;}
-.c5, .c7 {
+
+.C3Outside1, .C3Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.C3Inside1, .C3Inside2, .C3Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
 }
-.c6, .c8 {
-    background-color: #EBE4D4;
+.C3Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
+
+
 .D1 {
     display: grid;
     grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "D1Outside D1Inside";
+    grid-area: D1;
+    margin: 0px 0px 20px 20px;
+  }
+.D1Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "d1 d2"
-      "d3 d4";
-    grid-area: D1;
-    background-color:#F4D58D;
-    padding: 20px;
+      "D1Outside1"
+      "D1Outside2";
+    grid-area: D1Outside;
+    text-align: center;
 }
-.d1, .d2, .d3, .d4{padding: 20px; border: 1px solid black;}
-.d1, .d3 {
+.D1Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "D1Inside1"
+      "D1Inside2"
+      "D1Inside3";
+    grid-area: D1Inside;
+}
+.D1Outside1, .D1Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 24px;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid black;
 }
-.d2, .d4 {
-    background-color: #EBE4D4;
+.D1Inside1, .D1Inside2, .D1Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+.D1Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
 .D2 {
     grid-area: D2;
@@ -200,47 +427,111 @@ body{
 }
 .D3 {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "D3Inside D3Outside";
+    grid-area: D3;
+    margin: 0px 20px 20px 0px;
+}
+.D3Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "D3Inside1"
+      "D3Inside2"
+      "D3OInside3";
+    grid-area: D3Inside;
+}
+.D3Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "d5 d6"
-      "d7 d8";
-    grid-area: D3;
-    background-color:#F4D58D;
-    padding: 20px;
+      "D3Outside1"
+      "D3Outside2";
+    grid-area: D3Outside;
+    text-align: center;
 }
-.d5, .d6, .d7, .d8{padding: 20px; border: 1px solid black;}
-.d5, .d7 {
+
+.D3Outside1, .D3Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.D3Inside1, .D3Inside2, .D3Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
 }
-.d6, .d8 {
-    background-color: #EBE4D4;
+.D3Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
+
+
+
 .E1 {
     display: grid;
     grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "E1Outside E1Inside";
+    grid-area: E1;
+    margin: 0px 0px 20px 20px;
+  }
+.E1Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "e1 e2"
-      "e3 e4";
-    grid-area: E1;
-    background-color:#F4D58D;
-    padding: 20px;
+      "E1Outside1"
+      "E1Outside2";
+    grid-area: E1Outside;
+    text-align: center;
 }
-.e1, .e2, .e3, .e4{padding: 20px; border: 1px solid black;}
-.e1, .e3 {
+.E1Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "E1Inside1"
+      "E1Inside2"
+      "E1Inside3";
+    grid-area: E1Inside;
+}
+.E1Outside1, .E1Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 24px;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid black;
 }
-.e2, .e4 {
-    background-color: #EBE4D4;
+.E1Inside1, .E1Inside2, .E1Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+.E1Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
 .E2 {
     grid-area: E2;
@@ -250,25 +541,54 @@ body{
 }
 .E3 {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "E3Inside E3Outside";
+    grid-area: E3;
+    margin: 0px 20px 20px 0px;
+}
+.E3Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "E3Inside1"
+      "E3Inside2"
+      "E3OInside3";
+    grid-area: E3Inside;
+}
+.E3Outside {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "e5 e6"
-      "e7 e8";
-    grid-area: E3;
-    background-color:#F4D58D;
-    padding: 20px;
+      "E3Outside1"
+      "E3Outside2";
+    grid-area: E3Outside;
+    text-align: center;
 }
-.e5, .e6, .e7, .e8{padding: 20px; border: 1px solid black;}
-.e5, .e7 {
+
+.E3Outside1, .E3Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.E3Inside1, .E3Inside2, .E3Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
 }
-.e6, .e8 {
-    background-color: #EBE4D4;
+.E3Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
 }
-
-  
