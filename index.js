@@ -24,14 +24,14 @@ let info = {
     G2:{artist: 'Modest Mouse', song: 'Float On'},
     H2:{artist: 'Modest Mouse', song: 'Dashboard'},
 // Page 3 and 4
-    A3: {artist: 'The Gaslight Anthem', song: 'The \'59 Sound'},
+    A3: {artist: 'The Gaslight Anthem', song: '1,000 Years'},
     B3: {artist: 'The Gaslight Anthem', song: 'Stay Lucky'},
 
     A4: {artist: 'AFI', song: 'The Leaving Song Part Two'},
     B4: {artist: 'AFI', song: 'Miss Murder'},
 
     C3: {artist: 'Motion City Soundtrack', song: 'Everything Is Alright'},
-    D3: {artist: 'Motion City Soundtrack', song: 'When You\'re Around'},
+    D3: {artist: 'Motion City Soundtrack', song: 'The Future Freaks Me Out'},
 
     C4: {artist: 'The Used', song: 'Take It Away'},
     D4: {artist: 'The Used', song: 'Sick Hearts'},
@@ -39,23 +39,23 @@ let info = {
     E3: {artist: 'Rancid', song: 'Red Hot Moon'},
     F3: {artist: 'Rancid', song: 'Civilian Ways'},
 
-    E4: {artist: 'UnWritten Law', song: 'She Say\'s'},
-    F4: {artist: 'UnWritten Law', song: 'Seein\' Red'},
+    E4: {artist: 'Unwritten Law', song: 'She Say\'s'},
+    F4: {artist: 'Unwritten Law', song: 'Seein\' Red'},
 
     G3: {artist: 'The Strokes', song: 'Juicebox'},
     H3: {artist: 'The Strokes', song: 'I can\'t Win'},
 
-    G4: {artist: 'Walk The Moon', song: 'Shut Up And Dance'},
-    H4: {artist: 'Walk The Moon', song: 'Anna Sun'},
+    G4: {artist: 'Yellowcard', song: 'Ocean Avenue'},
+    H4: {artist: 'Yellowcard', song: 'Rough Landing, Holly'},
 // Page 5 and 6
     A5: {artist: 'Sum 41', song: 'We\'re All To Blame'},
     B5: {artist: 'Sum 41', song: 'Still Waiting'},
 
-    A6: {artist: 'Say Anything', song: 'Alive With The Glory Of Love'},
-    B6: {artist: 'Say Anything', song: 'Do Better'},
+    A6: {artist: 'Say Anything', song: 'Wow! I Can Get Sexual Too'},
+    B6: {artist: 'Say Anything', song: 'A Walk Through Hell'},
 
-    C5: {artist: 'Rise Against', song: 'Like The Angel'},
-    D5: {artist: 'Rise Against', song: 'Savior'},
+    C5: {artist: 'Rise Against', song: 'Give It All'},
+    D5: {artist: 'Rise Against', song: 'Prayer Of The Refugee'},
 
     C6: {artist: 'Relient K', song: 'In Love With The 80\'s (Pink Tux To The Prom)'},
     D6: {artist: 'Relient K', song: 'Must Of Done Something Right'},
