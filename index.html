@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://unpkg.com/normalize.css@5.0.0" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a3c73e114e.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="global.css" />
     </head>
     <body>
@@ -68,9 +69,9 @@
                         <div class="C1Outside2">F1</div>
                     </div>
                     <div class="C1Inside">
-                        <div class="C1Inside1">"What I Got"</div>
-                        <div class="C1Inside2">SUBLIME</div>
-                        <div class="C1Inside3">"Santeria"</div>
+                        <div class="C1Inside1">"Talk Shows On Mute"</div>
+                        <div class="C1Inside2">INCUBUS</div>
+                        <div class="C1Inside3">"Warning"</div>
                     </div>
                 </div>
                 <div class="C2"></div>
@@ -145,38 +146,43 @@
                     </div>
                 </div>
                 <div class="FooterMiddle">
-                    <div class="FooterMiddleTop">
-                        <button>A</button>
-                        <button>B</button>
-                        <button>C</button>
-                        <button>D</button>
-                        <button>E</button>
-                        <button>F</button>
-                        <button>G</button>
-                        <button>H</button>
-                        <button>I</button>
-                        <button>J</button>
+                    <div id="FooterMiddleTop" class="FooterMiddleTop">
+                        <button onclick="getLetter('A')" id="A" class="">A</button>
+                        <button onclick="getLetter('B')" id="B" class="">B</button>
+                        <button onclick="getLetter('C')" id="C" class="">C</button>
+                        <button onclick="getLetter('D')" id="D" class="">D</button>
+                        <button onclick="getLetter('E')" id="E" class="">E</button>
+                        <button onclick="getLetter('F')" id="F" class="">F</button>
+                        <button onclick="getLetter('G')" id="G" class="">G</button>
+                        <button onclick="getLetter('H')" id="H" class="">H</button>
+                        <button onclick="getLetter('I')" id="I" class="">I</button>
+                        <button onclick="getLetter('J')" id="J" class="">J</button>
+                        <button onclick="pageLeft()"id="pageLeft" class="leftButton button-push"><i class="fas fa-angle-left"></i></button>
                     </div>
-                    <div class="FooterMiddleBottom">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
-                        <button>10</button>
+                    <div id="FooterMiddleBottom" class="FooterMiddleBottom">
+                        <button onclick="getNumber('1')" id="1" class="">1</button>
+                        <button onclick="getNumber('2')" id="2" class="">2</button>
+                        <button onclick="getNumber('3')" id="3" class="">3</button>
+                        <button onclick="getNumber('4')" id="4" class="">4</button>
+                        <button onclick="getNumber('5')" id="5" class="">5</button>
+                        <button onclick="getNumber('6')" id="6" class="">6</button>
+                        <button onclick="getNumber('7')" id="7" class="">7</button>
+                        <button onclick="getNumber('8')" id="8" class="">8</button>
+                        <button onclick="getNumber('9')" id="9" class="">9</button>
+                        <button onclick="getNumber('10')" id="10" class="">10</button>
+                        <button onclick="pageRight()" id="pageRight" class="rightButton button-push"><i class="fas fa-angle-right"></i></button>
                     </div>
                 </div>
                 <div class="FooterRight">
-                    <div class="WhatsPlaying"></div>
+                    <div class="WhatsPlaying">
+                        <div id="NowPlaying" class="playing"></div>
+                        <div id="Artist" class="playing"></div>
+                        <div id="Song" class="playing"></div>
+                    </div>
                 </div>
             </div>               
-                <!-- <input type="text" id="pageId"/>
                 <!-- Blink 182 -->
-                <audio id="A1"><source src="./Music/All the small things.mp3" type="audio/mpeg"></audio>
+                <audio id="A1" class="Blink-182 All-The-Small-Things "><source src="./Music/All the small things.mp3" type="audio/mpeg"></audio>
                 <audio id="B1"><source src="./Music/The rock show.mp3" type="audio/mpeg"></audio>
                 <!-- The Killers -->
                 <audio id="A2"><source src="./Music/Mr. Brightside.mp3" type="audio/mpeg"></audio>
@@ -188,8 +194,8 @@
                 <audio id="C2"><source src="./Music/Semi-Charmed Life.mp3" type="audio/mpeg"></audio>
                 <audio id="D2"><source src="./Music/Jumper.mp3" type="audio/mpeg"></audio>
                 <!-- Sublime -->
-                <audio id="E1"><source src="./Music/Sublime - What I Got.mp3" type="audio/mpeg"></audio>
-                <audio id="F1"><source src="./Music/Santeria.mp3" type="audio/mpeg"></audio>
+                <audio id="E1"><source src="./Music/04 Talk shows on mute.mp3" type="audio/mpeg"></audio>
+                <audio id="F1"><source src="./Music/08 Warning.mp3" type="audio/mpeg"></audio>
                 <!-- Red Hot Chili Peppers -->
                 <audio id="E2"><source src="./Music/Californication.mp3" type="audio/mpeg"></audio>
                 <audio id="F2"><source src="./Music/Dani California.mp3" type="audio/mpeg"></audio>
@@ -198,7 +204,7 @@
                 <audio id="H1"><source src="./Music/Why don't you get a job.mp3" type="audio/mpeg"></audio>
                 <!-- Modest Mouse -->
                 <audio id="G2"><source src="./Music/Modest Mouse - Float On.mp3" type="audio/mpeg"></audio>
-                <audio id="H2"><source src="./Music/Modest_Mouse-Dashboard.mp3" type="audio/mpeg"></audio> -->
+                <audio id="H2"><source src="./Music/Modest_Mouse-Dashboard.mp3" type="audio/mpeg"></audio>
 
           <script src="index.js"></script>
     </body>

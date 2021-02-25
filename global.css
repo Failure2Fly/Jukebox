@@ -45,6 +45,7 @@ button{
     grid-template-areas:
       "A1Outside A1Inside";
     grid-area: A1;
+    margin-left: 20px;
 }
 .A1Outside {
     display: grid;
@@ -103,6 +104,7 @@ button{
     grid-template-areas:
       "A3Inside A3Outside";
     grid-area: A3;
+    margin-right: 20px;
 }
 .A3Inside {
     display: grid;
@@ -124,13 +126,14 @@ button{
       "A3Outside1"
       "A3Outside2";
     grid-area: A3Outside;
+    text-align: center;
 }
 .A3Outside1, .A3Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
     font-size: 30px;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid black;
 }
 .A3Inside1, .A3Inside2, .A3Inside3{
@@ -164,6 +167,7 @@ button{
     grid-template-areas:
       "B1Outside B1Inside";
     grid-area: B1;
+    margin-left: 20px;
 }
 .B1Outside {
     display: grid;
@@ -222,6 +226,7 @@ button{
     grid-template-areas:
       "B3Inside B3Outside";
     grid-area: B3;
+    margin-right: 20px;
 }
 .B3Inside {
     display: grid;
@@ -243,13 +248,14 @@ button{
       "B3Outside1"
       "B3Outside2";
     grid-area: B3Outside;
+    text-align: center;
 }
 .B3Outside1, .B3Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
     font-size: 30px;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid black;
 }
 .B3Inside1, .B3Inside2, .B3Inside3{
@@ -283,6 +289,7 @@ button{
     grid-template-areas:
       "C1Outside C1Inside";
     grid-area: C1;
+    margin-left: 20px;
 }
 .C1Outside {
     display: grid;
@@ -341,6 +348,7 @@ button{
     grid-template-areas:
       "C3Inside C3Outside";
     grid-area: C3;
+    margin-right: 20px;
 }
 .C3Inside {
     display: grid;
@@ -362,13 +370,14 @@ button{
       "C3Outside1"
       "C3Outside2";
     grid-area: C3Outside;
+    text-align: center;
 }
 .C3Outside1, .C3Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
     font-size: 30px;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid black;
 }
 .C3Inside1, .C3Inside2, .C3Inside3{
@@ -402,6 +411,7 @@ button{
     grid-template-areas:
       "D1Outside D1Inside";
     grid-area: D1;
+    margin-left: 20px;
 }
 .D1Outside {
     display: grid;
@@ -460,6 +470,7 @@ button{
     grid-template-areas:
       "D3Inside D3Outside";
     grid-area: D3;
+    margin-right: 20px;
 }
 .D3Inside {
     display: grid;
@@ -481,13 +492,14 @@ button{
       "D3Outside1"
       "D3Outside2";
     grid-area: D3Outside;
+    text-align: center;
 }
 .D3Outside1, .D3Outside2{
     background-color:#BF0603;
     color: white;
     font-family: 'Fjalla One', sans-serif;
     font-size: 30px;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid black;
 }
 .D3Inside1, .D3Inside2, .D3Inside3{
@@ -513,7 +525,7 @@ button{
     grid-template-areas:
       "FooterLeft FooterMiddle FooterRight";
     grid-area: Footer;
-    padding: 10px;
+    padding: 5px;
 }
 .FooterLeft{
     margin: auto 10px;
@@ -535,20 +547,55 @@ button{
     text-align: center;
 }
 button{
-    height: 50px;
-    width: 50px;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+}
+button{
+    height: 40px;
+    width: 40px; 
+    background: #BF0603;
+    color: #fff;
+    box-shadow: 0 6px #ab3c3c;
+    border: solid 1px black;
+}
+.button-push:active{
+    box-shadow: 0 0 #ab3c3c;
+    top: 6px;
+}
+.button{
+    box-shadow: 0 0 #ab3c3c;
+    top: 6px;
+}
+.fas{
+    font-size: 15px;
 }
 .FooterRight{
-    padding: 5px;
     background-color:  #878E99;
     border: solid 2px black;
 }
 .WhatsPlaying{
     height: 100%;
-    width: 100%;
+    width: 100%; 
     background-color: white;
     border: solid 2px black;
     border-radius: 10%;
     text-align: center;
     font-size: 30;
+}
+.playing, .selection{
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
 }
