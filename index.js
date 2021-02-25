@@ -81,8 +81,8 @@ let info = {
     C7: {artist: 'Panic! At The Disco', song: 'I Write Sins Not Tragedies'},
     D7: {artist: 'Panic! At The Disco', song: 'Nine In The Afternoon'},
 
-    C8: {artist: 'Something Corporate', song: 'She Paints Me Blue'},
-    D8: {artist: 'Something Corporate', song: 'I Woke Up In A Car'},
+    C8: {artist: 'Something Corporate', song: 'I Woke Up In A Car'},
+    D8: {artist: 'Something Corporate', song: 'She Paints Me Blue'},
 
     E7: {artist: 'Taking Back Sunday', song: 'Makedamnsure'},
     F7: {artist: 'Taking Back Sunday', song: 'You\'re So Last Summer'},
