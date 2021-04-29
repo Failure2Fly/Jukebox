@@ -43,7 +43,7 @@ let info = {
     F4: {artist: 'Unwritten Law', song: 'Seein\' Red'},
 
     G3: {artist: 'The Strokes', song: 'Juicebox'},
-    H3: {artist: 'The Strokes', song: 'I can\'t Win'},
+    H3: {artist: 'The Strokes', song: 'I Can\'t Win'},
 
     G4: {artist: 'Yellowcard', song: 'Ocean Avenue'},
     H4: {artist: 'Yellowcard', song: 'Rough Landing, Holly'},
@@ -140,7 +140,7 @@ function getLetter(Letter){
         console.log(newLetter)
     }
 }
-
+module.export = getLetter;
 
 // Function grabs id of button (which matches the InnerHTML)
 // Function sets class to the HTML element that matches the id.
@@ -190,11 +190,32 @@ function combineButtons(){
      }, 2000);
 }
 
+module.export = combineButtons;
+
+
+
+// When clicked need to loop through 
+
 
 function pageLeft(){
     console.log("Page should turn left unless all the way to left")
 }
 
+
+
+
 function pageRight(){
     console.log("Page should turn right unless all the way to right")
+    var oldPage = document.getElementById("pageOne_Two")
+    var newPage = document.getElementById("pageThree_Four")
+
+    newPage.classList.remove("page-remove")
+    oldPage.classList.add("page-remove")
+
 }
+
+
+
+
+
+

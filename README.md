@@ -14,7 +14,8 @@
 <!-- Functions left to create for MVP -->
 
 5. We make sure no other song can be played while song is playing.
-6. LOOK BACK AND REFACTOR
+6. Add time to each song info. This way we can know how long until another song can be played and when to display the info in "Now Playing"
+7. LOOK BACK AND REFACTOR
 
 <!-- Past MVP -->
 1. Add more stylized CSS. Add Neon Aesthetic. Add page turning. Add 3D effect to all of page. Update What's Playing to display more like radio.
