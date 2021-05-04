@@ -616,7 +616,7 @@ button{
 }
 .playing, .selection{
     color: black;
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
     font-family: 'Fjalla One', sans-serif;
 }
@@ -712,7 +712,4 @@ button{
     width: 10em;
     background: #fff;
 } */
-.carousel{
-    height: 80% !important;
-}
 
