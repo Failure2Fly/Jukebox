@@ -140,7 +140,6 @@ function getLetter(Letter){
         console.log(newLetter)
     }
 }
-module.export = getLetter;
 
 // Function grabs id of button (which matches the InnerHTML)
 // Function sets class to the HTML element that matches the id.
@@ -169,12 +168,31 @@ function combineButtons(){
     let music = info[combo.toString()]
     let fullSeconds = ((music.minutes*60) + music.seconds) + '000';
 
+    let seconds = music.seconds
+    let minutes = music.minutes
 
     document.getElementById("NowPlaying").innerHTML = "NOW PLAYING"
     document.getElementById("Artist").innerHTML = music.artist
     document.getElementById("Song").innerHTML = '"' + music.song + '"'
-    document.getElementById("SongTime").innerHTML = music.minutes + ':' + music.seconds
+    document.getElementById("SongTime").innerHTML = minutes + ':' + seconds;
     newCombo.play()
+
+    var timer = setInterval(function(){
+        fullSeconds = fullSeconds - 1000;
+        seconds = seconds - 1;
+        if (seconds === -1){
+            minutes = minutes - 1;
+            seconds = 59;
+            if (minutes === -1){
+                return null;
+            }
+        }
+        document.getElementById("SongTime").innerHTML = minutes + ':' + seconds;
+        if (seconds < 10){
+            document.getElementById("SongTime").innerHTML = minutes + ':' + '0' + seconds;
+        }
+    }, 1000)
+
     setTimeout(function(){
         let elemenLetter = document.getElementById(newLetter)
         elemenLetter.classList.remove("button-push")
@@ -189,6 +207,8 @@ function combineButtons(){
 
         let buttonPressedBottom = document.getElementById('FooterMiddleBottom')
         buttonPressedBottom.classList.remove('button-pressed')
+
+        clearInterval(timer)
      }, fullSeconds);
 }
 
