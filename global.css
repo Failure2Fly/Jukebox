@@ -6,7 +6,7 @@ img {
 }
 body{
     min-height: 100%;
-    line-height: 1.1 !important;
+    line-height: .5;
 }
 button{
     background-color:#BF0603;
@@ -19,13 +19,14 @@ button{
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "Row1"
       "Row2"
       "Row3"
-      "Row4";
+      "Row4"
+      "Row5";
     grid-area: grid-container;
     background-color: #001427;
 }
@@ -520,6 +521,130 @@ button{
 }
 
 
+.Row5 {
+    display: grid;
+    grid-template-columns: 48% 4% 48%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "E1 E2 E3";
+    grid-area: Row5;
+}
+.E1 {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "E1Outside E1Inside";
+    grid-area: E1;
+    margin-left: 20px;
+}
+.E1Outside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "E1Outside1"
+      "E1Outside2";
+    grid-area: E1Outside;
+    text-align: center;
+}
+.E1Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "E1Inside1"
+      "E1Inside2"
+      "E1Inside3";
+    grid-area: E1Inside;
+    text-align: center;
+}
+.E1Outside1, .E1Outside2{
+    background-color:#BF0603;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    padding: 20px;
+    border: 1px solid black;
+}
+.E1Inside1, .E1Inside2, .E1Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+.E1Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
+}
+.E2 {
+    grid-area: E2;
+    background-color: #878E99;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.E3 {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "E3Inside E3Outside";
+    grid-area: E3;
+    margin-right: 20px;
+}
+.E3Inside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "E3Inside1"
+      "E3Inside2"
+      "E3Inside3";
+    grid-area: E3Inside;
+}
+.E3Outside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "E3Outside1"
+      "E3Outside2";
+    grid-area: E3Outside;
+    text-align: center;
+}
+.E3Outside1, .E3Outside2{
+    background-color:#BF0603;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    padding: 20px;
+    border: 1px solid black;
+}
+.E3Inside1, .E3Inside2, .E3Inside3{
+    background-color: #F4D58D;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+.E3Inside2{
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    background-color: white;
+}
+
+
+
+
 
 .Footer{
     display: grid;
@@ -613,6 +738,7 @@ button{
     border-radius: 10%;
     text-align: center;
     font-size: 30;
+    line-height: 1.1 !important;
 }
 .playing, .selection{
     color: black;
@@ -620,11 +746,10 @@ button{
     text-align: center;
     font-family: 'Fjalla One', sans-serif;
 }
-
-
-.page-remove{
-    display: none;
+#NowPlaying{
+    font-weight: 700;
 }
+
 
 
 
