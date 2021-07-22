@@ -152,8 +152,9 @@ let info = {
     J9:{artist: 'SENSES FAIl', song: 'Can\'t Be Saved', minutes: 3, seconds: 07},
 
     I10:{artist: 'YEAH YEAH YEAHS', song: 'Phenomena', minutes: 4, seconds: 10},
-    J10:{artist: 'YEAH YEAH YEAHS', song: 'Maps', minutes: 3, seconds: 42}
+    J10:{artist: 'YEAH YEAH YEAHS', song: 'Maps', minutes: 3, seconds: 42, image: ""}
 }
+
 
 
 // Function grabs id of button (which matches the InnerHTML)
